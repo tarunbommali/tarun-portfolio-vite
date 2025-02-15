@@ -1,23 +1,51 @@
-# react-daisy
+# React-vite-redux-tailwindcss-daisyui-starter
 
-Deadly simple template to start react with vite + tailwindcss + daisyUI + Heroicons!
+Simple template to start react with React + vite + redux + tailwindcss + daisyui 
 
 ## installation
 
 ```
-npm install -g degit
-degit harrysaputra/react-daisy my-new-project
+git clone https://github.com/tarunbommali/react-vite-redux-tailwindcss-daisyui-starter
+cd react-vite-redux-tailwindcss-daisyui-starter
 ```
-
-or
-
-```
-npx degit harrysaputra/react-daisy my-new-project
-```
-
 ## How to use
 ```
-cd my-new-project
-yarn
-yarn dev
+cd react-vite-redux-tailwindcss-daisyui-starter
+npm install
 ```
+
+## Run the template
+```
+npm run dev
+```
+
+
+# Template Starter
+- vite + react
+- Tailwind CSS integration
+- DaisyUI [https://daisyui.com/components/]
+  daisyUI adds component class names to Tailwind CSS
+  so you can make beautiful websites faster than ever.
+- Routing with route Navigation 
+- redux + redux toolkit basic setup
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
