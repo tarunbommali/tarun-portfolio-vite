@@ -8,7 +8,7 @@ import Skills from "./routes/Skills";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { FaRobot, FaChevronUp } from "react-icons/fa6";
-import AIChatbot from "./components/Global/AIChatbot";
+import AIChatbot from "./AIChatbot";
 
 // Scroll to Top Function
 const scrollToTop = () => {
