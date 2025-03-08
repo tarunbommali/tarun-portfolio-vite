@@ -1,9 +1,9 @@
-import Heropage1 from "../components/Home/Heropage"
+import HeroPage1 from "../components/Home/Heropage1"
 
 const Home = () => {
   return (
     <div className="relative overflow-x-hidden flex flex-col">
-        <Heropage1/>
+        <HeroPage1/>
         
     </div>
   )
