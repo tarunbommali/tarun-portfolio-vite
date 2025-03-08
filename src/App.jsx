@@ -6,7 +6,7 @@ import Projects from "./routes/Projects";
 import About from "./routes/About";
 import Skills from "./routes/Skills";
 import { useEffect, useState } from "react";
-import FloatingButtons from "./components/Global/FloatingButtons";
+import FloatingButtons from './components/Global/FloatingButtons'
 
 // Scroll to Top Function
 const scrollToTop = () => {
