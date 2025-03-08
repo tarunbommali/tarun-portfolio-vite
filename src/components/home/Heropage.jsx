@@ -58,7 +58,7 @@ const HeroPage1 = () => {
                 <h1
                   className={`text-5xl sm:text-5xl font-bold ${ThemeTextColor}`}
                 >
-                  I'm, Tarun Bommali
+                  Im, Tarun Bommali
                 </h1>
               </div>
 
