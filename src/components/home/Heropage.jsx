@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import SocialMenu from "../Global/socialMenu";
+import SocialMenu from "../Global/SocialMenu";
 import TypewriterComponent from "../Animation/Typewriter";
 import {
   PROFILE_IMG_URL,

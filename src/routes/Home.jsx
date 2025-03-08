@@ -1,4 +1,4 @@
-import Heropage1 from "../components/home/Heropage"
+import Heropage1 from "../components/Home/Heropage"
 
 const Home = () => {
   return (
