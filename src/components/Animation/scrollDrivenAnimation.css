@@ -1,0 +1,14 @@
+.column-reverse {
+  transform: translateY(calc(-100% + 100vh));
+  animation: adjust-position linear forwards;
+  animation-timeline: scroll(root block);
+}
+
+@keyframes adjust-position {
+  from {
+    transform: translateY(calc(-100% + 100vh));
+  }
+  to {
+    transform: translateY(calc(100% - 100vh));
+  }
+}

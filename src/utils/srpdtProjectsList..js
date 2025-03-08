@@ -1,0 +1,38 @@
+export const srpdtProjectsList = [
+    {
+      id: 1,
+      name: 'Blood Bank System',
+      problem: 'Difficulty in finding blood donors during emergencies.',
+      solution: 'A platform to connect donors and recipients efficiently.',
+      functionalities: ['Donor registration', 'Search for donors', 'Admin dashboard', 'Notifications'],
+      userRoles: ['Donor', 'Recipient', 'Admin'],
+      image: 'https://plus.unsplash.com/premium_photo-1723132607971-8c9035f26ead?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+    {
+      id: 2,
+      name: 'University Complaint Management',
+      problem: 'Lack of a proper system to track and resolve university complaints.',
+      solution: 'A centralized system for students and staff to manage complaints.',
+      functionalities: ['Anonymous complaint registration', 'Status tracking', 'Admin dashboard', 'Categorization'],
+      userRoles: ['Student', 'Staff', 'Admin'],
+      image: 'https://plus.unsplash.com/premium_photo-1661372027153-816fe3192832?q=80&w=1785&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+    {
+      id: 3,
+      name: 'Mobile Addiction Awareness',
+      problem: 'Excessive mobile usage affecting student productivity.',
+      solution: 'A community-driven platform to track and reduce screen time.',
+      functionalities: ['Goal setting', 'Chat groups', 'Leaderboards', 'Tips and blogs'],
+      userRoles: ['Student'],
+      image: 'https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+    {
+      id: 4,
+      name: 'Business Communication Platform',
+      problem: 'Hesitation in seeking advice due to fear of judgment.',
+      solution: 'An anonymous platform for students to discuss business and career topics.',
+      functionalities: ['Anonymous Q&A', 'Discussion forums', 'Upvoting system', 'Content moderation'],
+      userRoles: ['Student', 'Mentor'],
+      image: 'https://plus.unsplash.com/premium_photo-1681492985238-c03c92137e0f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+  ];
