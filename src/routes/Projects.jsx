@@ -1,33 +1,31 @@
-import  { useEffect, useRef } from "react";
-import "../components/Animation/scrollDrivenAnimation.css";
+import { projectsList } from "../utils/projectsData";
+import ProjectCard from "../components/Projects/ProjectCard";
+import { useSelector } from "react-redux";
 
 const Projects = () => {
-  const columnsRef = useRef([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-columns");
-          } else {
-            entry.target.classList.remove("animate-columns");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    columnsRef.current.forEach((col) => {
-      if (col) observer.observe(col);
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
+  const theme = isDarkTheme ? "dark" : "light"; // Dynamically set theme
 
   return (
-    <div className="flex justify-center md:px-48 my-10">
-      <div className="columns grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 overflow-hidden">
+    <div
+      className={`min-h-screen py-10 px-5 transition-all duration-300 ${
+        theme === "light" ? "bg-gray-100 text-gray-900" : "bg-gray-900 text-white"
+      }`}
+    >
+      {/* Page Title */}
+      <h2
+        className={`text-3xl font-bold mb-8 transition-colors ${
+          theme === "light" ? "text-blue-600" : "text-blue-400"
+        }`}
+      >
+        Projects
+      </h2>
+
+      {/* Project Cards Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+        {projectsList.map((project) => (
+          <ProjectCard key={project.projectId} project={project} />
+        ))}
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
-const currentTheme = 'dark';  // Change this dynamically in your app
 
-export const tsObject = {
+
+export const getTsObject = (theme) => ({
   background: {
     color: { 
-      value: currentTheme === 'light' ? 'transparent' : '#121212' // Light theme: transparent, Dark theme: dark color
+      value: theme === 'light' ? 'transparent' : '#121212' 
     },
   },
   fpsLimit: 120,
@@ -19,9 +19,9 @@ export const tsObject = {
     },
   },
   particles: {
-    color: { value: currentTheme === 'light' ? "#000000" : "#ffffff" }, 
+    color: { value: theme === 'light' ? "#000000" : "#ffffff" }, 
     links: {
-      color: currentTheme === 'light' ? "#000000" : "#ffffff", 
+      color: theme === 'light' ? "#000000" : "#ffffff", 
       distance: 150,
       enable: true,
       opacity: 0.5,
@@ -34,4 +34,4 @@ export const tsObject = {
     size: { value: { min: 1, max: 5 } },
   },
   detectRetina: true,
-};
+});

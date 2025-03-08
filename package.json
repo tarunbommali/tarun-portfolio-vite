@@ -16,6 +16,7 @@
     "@tsparticles/slim": "^3.8.1",
     "autoprefixer": "^10.4.14",
     "bootstrap": "^5.3.3",
+    "clsx": "^2.1.1",
     "daisyui": "^4.12.23",
     "gsap": "^3.12.7",
     "hamburger-react": "^2.5.0",
