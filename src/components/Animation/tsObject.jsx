@@ -3,7 +3,7 @@
 export const getTsObject = (theme) => ({
   background: {
     color: { 
-      value: theme === 'light' ? 'transparent' : '#121212' 
+      value: theme === 'light' ? '#ffffff' : '#121212' 
     },
   },
   fpsLimit: 120,

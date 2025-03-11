@@ -34,7 +34,7 @@ const iconColors = {
     hackerrank: "#2EC866",
     leetcode: "#FFA116",
     text: "text-white",
-    bg: "bg-gray-900",
+    bg: "bg-black",
   },
 };
 
@@ -43,7 +43,7 @@ const Footer = () => {
   const theme = isDarkTheme ? "dark" : "light"; // Dynamically set theme
 
   return (
-    <footer className={`footer ${iconColors[theme].bg} ${iconColors[theme].text} p-10`}>
+    <footer className={`footer ${iconColors[theme].bg} ${iconColors[theme].text} p-6 md:p-10`}>
       {/* Popular Coding Questions */}
       <nav>
         <h6 className="footer-title">Solved Popular Coding Questions</h6>
@@ -85,8 +85,8 @@ const Footer = () => {
         </div>
 
         {/* Coding Profiles */}
-        <h6 className="footer-title">Coding Profiles</h6>
-        <div className="grid grid-flow-col gap-4">
+        <h6 className="footer-title mt-4">Coding Profiles</h6>
+        <div className="grid grid-flow-col gap-4 ">
           <SocialIconLink href="https://github.com/tarunbommali" target="_blank">
             <FaGithub size={28} style={{ color: iconColors[theme].github }} />
           </SocialIconLink>

@@ -21,8 +21,8 @@ const TypewriterComponent = () => {
           ],
           autoStart: true,
           loop: true,
-          wrapperClassName: `text-[28px] md:text-[32px] font-bold ${textColor}`, // Dynamic text color
-          cursorClassName: `text-[28px] md:text-[28px] ${cursorColor}`, // Dynamic cursor color
+          wrapperClassName: `text-[22px] md:text-[32px] font-bold ${textColor}`, // Dynamic text color
+          cursorClassName: `text-[22px] md:text-[28px] ${cursorColor}`, // Dynamic cursor color
           delay: 100,
         }}
       />

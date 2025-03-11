@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { motion } from "framer-motion";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
@@ -36,16 +37,13 @@ const HeroPage1 = () => {
     },
     dark: {
       textColor: "text-white",
-
       btnPrimary: "bg-green-500 hover:bg-green-600 text-white",
       btnSecondary: "bg-gray-500 hover:bg-gray-600 text-white",
     },
   };
 
   return (
-    <div
-      className={`relative min-h-screen w-full overflow-hidden }`}
-    >
+    <div className={`relative min-h-screen w-full overflow-hidden`}>
       {/* Particles Background */}
       {init && (
         <Particles
@@ -56,15 +54,20 @@ const HeroPage1 = () => {
       )}
 
       {/* Main Content */}
-      <div className="relative z-10 flex justify-center items-center min-h-screen text-center sm:px-10">
+      <div className="relative z-10 flex justify-center items-center min-h-screen  text-center sm:px-10">
         <div className="hero flex flex-col lg:flex-row items-center lg:justify-center bg-transparent min-h-screen">
           <div className="hero-content flex flex-col lg:flex-row items-center lg:items-start">
-            {/* Profile Image */}
-            <img
+            {/* Profile Image with Animation */}
+            <motion.img
               alt="profile"
               src={PROFILE_IMG_URL}
-              className="w-48 rounded-full hover:scale-95 shadow-2xl mb-6 md:mr-44 lg:mb-0"
+              className="w-48 md:w-[300px] md:h-[300px] rounded-full shadow-2xl mb-6 md:mr-44 lg:mb-0"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              whileHover={{ scale: 1.05 }}
             />
+
             <div className="flex flex-col justify-center w-full lg:w-auto">
               <div className="flex flex-col justify-start">
                 <h1
@@ -73,7 +76,7 @@ const HeroPage1 = () => {
                   Hi,
                 </h1>
                 <h1
-                  className={`text-5xl sm:text-5xl font-bold ${themeStyles[theme].textColor}`}
+                  className={`md:text-5xl sm:text-2xl font-bold ${themeStyles[theme].textColor}`}
                 >
                   I am, Tarun Bommali
                 </h1>

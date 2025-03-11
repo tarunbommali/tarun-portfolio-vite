@@ -2,6 +2,7 @@ import Services from "../components/About/services";
 import Testimonial from "../components/About/testimonial";
 import MyAccordion from "../components/About/myAccordion";
 import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
 
 const About = () => {
   const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
@@ -9,11 +10,24 @@ const About = () => {
 
   return (
     <div
-      className={`w-full min-h-screen transition-all ${
-        theme === "light" ? "bg-gray-100 text-gray-900" : "bg-gray-900 text-white"
+      className={`flex flex-col py-5 mt-[-10px] ${
+        theme === "light"
+          ? "bg-gray-100 text-gray-900"
+          : "bg-gray-900 text-white"
       }`}
     >
-      <div className="container mx-auto py-10 px-5">
+      <div className="container mx-auto p-5">
+        {/* Page Title */}
+        <motion.p
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8, ease: "easeInOut" }} // Smooth fade-in effect
+  className={`text-xl md:text-3xl text-center font-bold mb-8 capitalize transition-colors ${
+    theme === "light" ? "text-blue-600" : "text-blue-400"
+  }`}
+>
+          About
+        </motion.p>
         {/* Services Section */}
         <div
           className={`p-5 rounded-md shadow-lg transition-all ${
@@ -33,9 +47,7 @@ const About = () => {
         </div>
 
         {/* Accordion Section */}
-        <div
-          className={`mt-10 p-5 rounded-md shadow-lg transition-all `}
-        >
+        <div className={`mt-10 p-5 rounded-md shadow-lg transition-all `}>
           <MyAccordion />
         </div>
       </div>

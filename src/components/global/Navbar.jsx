@@ -1,17 +1,24 @@
-/* eslint-disable react/prop-types */
-import { navMenuList } from "../../utils/navMenuList";
-import { useSelector, useDispatch } from "react-redux";
-import { Menu, X } from "lucide-react";
-import { toggleSidebar } from "../../store/sidebarSlice";
-import { Link } from "react-router-dom";
-import { useRef } from "react";
-import { toggleTheme } from "../../store/themeSlice";
+import { PORTFOLIO_URL } from "../../utils/constants";
+import * as NavbarImports from "./index";
 
 export default function Navbar() {
+  const {
+    useSelector,
+    useDispatch,
+    Menu,
+    X,
+    toggleSidebar,
+    Link,
+    useRef,
+    toggleTheme,
+    motion,
+    navMenuList,
+  } = NavbarImports;
+
   const dispatch = useDispatch();
   const expanded = useSelector((state) => state.sidebar.expanded);
   const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
-  
+
   const theme = isDarkTheme ? "dark" : "light";
 
   const sidebarRef = useRef(null);
@@ -48,27 +55,35 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full flex justify-between items-center px-6  py-2 md:py-4  shadow-md z-50 transition-colors ${
-          theme === "light" ?  "bg-white text-gray-900":"bg-gray-900 text-white" 
+        className={`fixed top-0 left-0 w-full flex justify-between items-center px-2 md:px-8  py-2 md:py-4  shadow-md z-50 transition-colors ${
+          theme === "light"
+            ? "bg-white text-gray-900"
+            : "bg-gray-900 text-white"
         }`}
       >
-        <h1 className="text-xl font-bold">Tarun B.</h1>
+        <a href={PORTFOLIO_URL} className="text-xl font-bold">
+          Tarun B.
+        </a>
         <nav className="hidden md:flex items-center space-x-6">
           {navMenuList.map((item, index) => (
-            <Link
+            <motion.div
               key={index}
-              to={item.pathname}
-              className={`hover:text-indigo-600 transition-colors ${
-                isDarkTheme
-                  ? "text-gray-300 hover:text-indigo-400"
-                  : "text-gray-700"
-              }`}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
             >
-              {item.displayText}
-            </Link>
+              <Link
+                to={item.pathname}
+                className={`hover:text-indigo-600 transition-colors 
+                }`}
+              >
+                {item.displayText}
+              </Link>
+            </motion.div>
           ))}
           {renderThemeController()}
         </nav>
+
         <div className="md:hidden flex items-center">
           {renderThemeController()}
           <button
@@ -89,18 +104,34 @@ export default function Navbar() {
         ref={sidebarRef}
         className={`fixed top-0 left-0 h-screen w-64 shadow-md transform transition-transform duration-300 md:hidden z-50 ${
           expanded ? "translate-x-0" : "-translate-x-full"
-        } ${theme === "light" ?   "bg-white text-gray-900":"bg-gray-900 text-white"}`}
+        } ${
+          theme === "light"
+            ? "bg-white text-gray-900"
+            : "bg-gray-900 text-white"
+        }`}
       >
         <nav className="flex flex-col p-4">
           {navMenuList.map((item, index) => (
-            <Link
+            <motion.div
               key={index}
-              to={item.pathname}
-              className="py-2 px-3 rounded-md"
-              onClick={() => dispatch(toggleSidebar())}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
             >
-              {item.displayText}
-            </Link>
+              <Link
+                key={index}
+                to={item.pathname}
+                className={`flex items-center py-2 my-2 border px-3 rounded-md ${
+                  location.pathname === item.pathname
+                    ? "bg-indigo-600 text-white font-semibold"
+                    : ""
+                }`}
+                onClick={() => dispatch(toggleSidebar())}
+              >
+                <item.icon size={24} />
+                <span className="text-xl mx-1">{item.displayText}</span>
+              </Link>
+            </motion.div>
           ))}
         </nav>
       </aside>

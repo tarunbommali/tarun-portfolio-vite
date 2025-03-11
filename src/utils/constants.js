@@ -1,7 +1,7 @@
 export const PROFILE_IMG_URL =
-  "https://res.cloudinary.com/drdgj0pch/image/upload/v1707662912/WhatsApp_Image_2024-02-09_at_14.26.09_9a0ddc7f_yqjui9.jpg";
+  "https://res.cloudinary.com/drdgj0pch/image/upload/v1741692614/IMG_20250311_165522_iibsf8.jpg";
 
-
+export const PORTFOLIO_URL = "https://tarunbommali.netlify.app/"
 export const FAVICON_IMG_URL = PROFILE_IMG_URL
 
 export const WHATSAPP_URL = `whatsapp://send?phone=+91 9581193026&text=${encodeURIComponent(

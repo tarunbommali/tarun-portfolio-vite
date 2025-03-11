@@ -2,8 +2,7 @@ import { skillsList } from "../utils/skillsData";
 import { FaStar } from "react-icons/fa";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-
-const SKILL_ROUTE_BG_URL = "";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const [activeTopic, setActiveTopic] = useState("React");
@@ -12,22 +11,29 @@ const Skills = () => {
 
   return (
     <div
-      className={`flex justify-center bg-cover transition-all ${
+      className={`flex flex-col justify-center py-5 mt-[-10px]  transition-all ${
         theme === "light" ? "bg-gray-100" : "bg-gray-900"
       }`}
-      style={{
-        backgroundImage: `url(${SKILL_ROUTE_BG_URL})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
-      }}
     >
-      <div className="w-[80%]">
+      {/* Page Title */}
+      <motion.p
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }} // Smooth fade-in effect
+        className={`text-xl md:text-3xl text-center font-bold mb-8 capitalize transition-colors ${
+          theme === "light" ? "text-blue-600" : "text-blue-400"
+        }`}
+      >
+        Skills
+      </motion.p>
+
+      <div className="w-[80%] flex  flex-col justify-center items-center mx-auto">
         {/* Skills List */}
         <ul
           className={`flex flex-wrap m-5 p-5 rounded-md transition-all ${
-            theme === "light" ? "bg-white text-gray-900" : "bg-gray-800 text-white"
+            theme === "light"
+              ? "bg-white text-gray-900"
+              : "bg-gray-800 text-white"
           }`}
         >
           {skillsList.map(({ id, technology, icon, rating }) => (
@@ -73,7 +79,9 @@ const Skills = () => {
         {/* Skill Item Concepts */}
         <div
           className={`flex-wrap m-5 p-5 rounded-md hidden md:flex transition-all ${
-            theme === "light" ? "bg-white text-gray-900" : "bg-gray-800 text-white"
+            theme === "light"
+              ? "bg-white text-gray-900"
+              : "bg-gray-800 text-white"
           }`}
         >
           {skillsList
