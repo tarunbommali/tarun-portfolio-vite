@@ -1,19 +1,17 @@
+/* eslint-disable react/prop-types */
 import { PORTFOLIO_URL } from "../../utils/constants";
-import * as NavbarImports from "./index";
+import  { navMenuList } from "../../utils/navMenuList";
+import  { useSelector, useDispatch } from "react-redux";
+import  { Menu, X } from "lucide-react";
+import  { toggleSidebar } from "../../store/sidebarSlice";
+import  { Link } from "react-router-dom";
+import  { useRef } from "react";
+import  { toggleTheme } from "../../store/themeSlice";
+import  { motion } from "framer-motion";
+
 
 export default function Navbar() {
-  const {
-    useSelector,
-    useDispatch,
-    Menu,
-    X,
-    toggleSidebar,
-    Link,
-    useRef,
-    toggleTheme,
-    motion,
-    navMenuList,
-  } = NavbarImports;
+  
 
   const dispatch = useDispatch();
   const expanded = useSelector((state) => state.sidebar.expanded);
