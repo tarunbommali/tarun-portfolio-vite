@@ -34,7 +34,7 @@ const iconColors = {
     hackerrank: "#2EC866",
     leetcode: "#FFA116",
     text: "text-white",
-    bg: "bg-black",
+    bg: "bg-[#1d232a]",
   },
 };
 

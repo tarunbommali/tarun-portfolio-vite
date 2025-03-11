@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
-import { PORTFOLIO_URL } from "../../utils/constants";
-import  { navMenuList } from "../../utils/navMenuList";
+import { PORTFOLIO_URL } from "./utils/constants";
+import  { navMenuList } from "./utils/navMenuList";
 import  { useSelector, useDispatch } from "react-redux";
 import  { Menu, X } from "lucide-react";
-import  { toggleSidebar } from "../../store/sidebarSlice";
+import  { toggleSidebar } from "./store/sidebarSlice";
 import  { Link } from "react-router-dom";
 import  { useRef } from "react";
-import  { toggleTheme } from "../../store/themeSlice";
+import  { toggleTheme } from "./store/themeSlice";
 import  { motion } from "framer-motion";
 
 
@@ -56,7 +56,7 @@ export default function Navbar() {
         className={`fixed top-0 left-0 w-full flex justify-between items-center px-2 md:px-8  py-2 md:py-4  shadow-md z-50 transition-colors ${
           theme === "light"
             ? "bg-white text-gray-900"
-            : "bg-gray-900 text-white"
+            : "bg-[#1d232a] text-white"
         }`}
       >
         <a href={PORTFOLIO_URL} className="text-xl font-bold">
