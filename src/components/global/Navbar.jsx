@@ -60,7 +60,7 @@ export default function Navbar() {
         }`}
       >
         <a href={PORTFOLIO_URL} className="text-xl font-bold">
-          Tarun B.
+          Tarun B
         </a>
         <nav className="hidden md:flex items-center space-x-6">
           {navMenuList.map((item, index) => (
