@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FaGithub, FaInstagram, FaLinkedin, FaHackerrank } from "react-icons/fa";
 import { TbBrandLeetcode } from "react-icons/tb";
 import { useSelector } from "react-redux";
-import { CERTIFICATE_AND_CERTIFICATION } from "../../utils/document";
+import { CERTIFICATE_AND_CERTIFICATION } from "./utils/document";
 
 // Styled component for icons
 const SocialIconLink = styled.a`
