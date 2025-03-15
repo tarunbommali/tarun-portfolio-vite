@@ -229,6 +229,11 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.39.0.tgz"
   integrity sha512-kf9RB0Fg7NZfap83B3QOqOGg9QmD9yBudqQXzzOtn3i4y7ZUXe5ONeW34Gwi+TxhH4mvj72R1Zc300KUMa9Bng==
 
+"@fortawesome/fontawesome-free@^6.7.2":
+  version "6.7.2"
+  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-6.7.2.tgz"
+  integrity sha512-JUOtgFW6k9u4Y+xeIaEiLr3+cjoUPiAuLXoyKOJSia6Duzb7pq+A76P9ZdPDoAoxHdHzq6gE9/jKBGXlZT8FbA==
+
 "@heroicons/react@^2.0.17":
   version "2.0.17"
   resolved "https://registry.npmjs.org/@heroicons/react/-/react-2.0.17.tgz"
@@ -2790,6 +2795,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+TagCloud@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.npmjs.org/TagCloud/-/TagCloud-2.5.0.tgz"
+  integrity sha512-lMr8UCbOLOyP9iKc/lJalpNTm25rjmplbQ20ljw02tyx4ITBxDh4TRBhSpayC6QGjtRtvslUljfr2SGoPOGnXw==
 
 tailwindcss@^3.4.1:
   version "3.4.17"

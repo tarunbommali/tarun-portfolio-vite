@@ -1,8 +1,4 @@
-export const PROFILE_IMG_URL =
-  "https://res.cloudinary.com/drdgj0pch/image/upload/v1741692614/IMG_20250311_165522_iibsf8.jpg";
-
-export const PORTFOLIO_URL = "https://tarunbommali.netlify.app/"
-export const FAVICON_IMG_URL = PROFILE_IMG_URL
+export const PORTFOLIO_URL = "https://tarunbommali.netlify.app/";
 
 export const WHATSAPP_URL = `whatsapp://send?phone=+91 9581193026&text=${encodeURIComponent(
   "I'm contacting you through your website."
@@ -16,8 +12,6 @@ export const LIGHT_THEME_ICON_URL =
 
 export const DARK_THEME_ICON_URL =
   "https://res.cloudinary.com/drdgj0pch/image/upload/v1708451192/moon_ggurcz.png";
-
-
 
 export const QUOTES_LIST = [
   "Code is like humor. When you have to explain it, it’s bad. - Cory House",
@@ -39,6 +33,5 @@ export const QUOTES_LIST = [
   "Programming can be fun, so can cryptography; however, they should not be combined. - Kreitzberg and Shneiderman",
   "Code is read more often than it’s written. - Guido van Rossum",
   "The best time to plant a tree was 20 years ago. The second best time is now. - Chinese Proverb",
-  "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela"
-
+  "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela",
 ];

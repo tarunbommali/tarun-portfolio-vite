@@ -2,15 +2,15 @@ import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-
+import PROFILE_IMG from '../../assets/PROFILE_IMG.png'
 import TypewriterComponent from "../Animation/Typewriter";
 import {
-  PROFILE_IMG_URL,
   WHATSAPP_URL,
   RESUME_DOWNLOAD_LINK,
 } from "../../utils/constants";
 import { getTsObject } from "../Animation/tsObject";
 import { useSelector } from "react-redux";
+import Globe from "../Animation/Globe";
 
 const HeroPage1 = () => {
   const [init, setInit] = useState(false);
@@ -60,8 +60,8 @@ const HeroPage1 = () => {
             {/* Profile Image with Animation */}
             <motion.img
               alt="profile"
-              src={PROFILE_IMG_URL}
-              className="w-48 md:w-[300px] md:h-[300px] rounded-full shadow-2xl mb-6 md:mr-44 lg:mb-0"
+              src={PROFILE_IMG}
+              className="w-[80%] md:w-[300px] md:h-[300px] rounded-full shadow-2xl mb-6 md:mr-44 lg:mb-0"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -71,12 +71,12 @@ const HeroPage1 = () => {
             <div className="flex flex-col justify-center w-full lg:w-auto">
               <div className="flex flex-col justify-start">
                 <h1
-                  className={`${themeStyles[theme].textColor} text-3xl sm:text-4xl lg:text-5xl`}
+                  className={`${themeStyles[theme].textColor} text-5xl`}
                 >
                   Hi,
                 </h1>
                 <h1
-                  className={`md:text-5xl sm:text-2xl font-bold ${themeStyles[theme].textColor}`}
+                  className={`text-5xl  font-bold ${themeStyles[theme].textColor}`}
                 >
                   I am, Tarun Bommali
                 </h1>
@@ -108,6 +108,8 @@ const HeroPage1 = () => {
                   </a>
                 </div>
               </div>
+
+              <Globe  />
             </div>
           </div>
         </div>
